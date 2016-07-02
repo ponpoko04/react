@@ -12,12 +12,24 @@
     <body>
         <div id="content"></div>
         <script type="text/babel">
-            var CommentBox = React.createClass({
+            //JSX
+            //var CommentBox = React.createClass({
+            //    render: function(){
+            //        return(
+            //            <div className="commentBox">
+            //                Hello, world! I am a CommentBox.
+            //            </div>
+            //        );
+            //    }
+            //});
+            
+            //プリコンパイラによるJavaScript生成後
+            var CommentBox = React.createClass({display: 'CommentBox',
                 render: function(){
-                    return(
-                        <div className="commentBox">
-                            Hello, world! I am a CommentBox.
-                        </div>
+                    return (
+                        React.createElement('div', {className: "commentBox"},
+                            "Hello, world! I am a CommentBox."
+                        )
                     );
                 }
             });
